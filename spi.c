@@ -2,7 +2,6 @@
 
 void delay(int milli_seconds)
 {
-
     clock_t start_time = clock();
     while (clock() < start_time + milli_seconds)
         ;
@@ -25,7 +24,6 @@ void spi_master_transfer(spi_mode_e mode, uint64_t freq, bool msb_first, uint8_t
     switch(mode)
     {
         case mode0:
-
             drive_low_spi_signal(spi1.cs);
             
             if (!msb_first)
