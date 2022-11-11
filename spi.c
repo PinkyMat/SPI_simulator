@@ -1,30 +1,4 @@
-
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <time.h>
-
-#define FREQ_TO_MS(hz) (1000/hz)
-
-typedef enum
-{
-    mode0 = 0,
-    mode1,
-    mode2,
-    mode3
-} spi_mode_e;
-
-
-typedef struct 
-{
-    uint8_t sclk;
-    uint8_t miso;
-    uint8_t mosi;
-    uint8_t cs;
-} spi_s;
-
-spi_s spi1 = {0,0,0,1};
-uint64_t test_input[] = {0x54, 0x66, 0x87, 0x33, 0x28, 0x15, 0x41, 0x90, 0x45, 0x78};
+#include <spi.h>
 
 void delay(int milli_seconds)
 {
