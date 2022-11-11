@@ -1,5 +1,7 @@
 #include <spi.h>
 
+spi_s spi1 = {0,0,0,1};
+
 void delay(int milli_seconds)
 {
     clock_t start_time = clock();
